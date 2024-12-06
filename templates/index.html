@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Western Institute of Technology</title>
+    <title>Western Institute of Technology Registration</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Welcome to WIT</h1>
     <p>If you don't study here, you are WITless!</p>
+
+    <!-- Flash Messages for Success/Error -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div>
+          {% for category, message in messages %}
+            <p class="{{ category }}">{{ message }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
     <form method="POST">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required><br>
 
-        <label for="phone">Phone Number:</label><br>
-        <input type="text" id="phone" name="phone" placeholder="xxx-xxx-xxxx" pattern="\d{3}-\d{3}-\d{4}" required><br><br>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" placeholder="xxx-xxx-xxxx" pattern="\d{3}-\d{3}-\d{4}" required><br>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
 
-        <label for="school">School:</label><br>
+        <label for="school">School:</label>
         <select id="school" name="school" required>
             <option value="Business">Business</option>
             <option value="IT">IT</option>
             <option value="Health">Health</option>
             <option value="Hospitality">Hospitality</option>
-        </select><br><br>
+        </select><br>
 
         <button type="submit">Submit</button>
     </form>
 </body>
 </html>
-
