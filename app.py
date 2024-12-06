@@ -9,7 +9,7 @@ conn = pyodbc.connect(
     'SERVER=wit-register-server.database.windows.net;'
     'DATABASE=WIT-Register-DB;'
     'UID=useradmin;'
-    'PWD=Passw0rd!!!!'
+    'PWD=P@ssw0rd!!!!'
 )
 cursor = conn.cursor()
 
