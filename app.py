@@ -6,8 +6,8 @@ app = Flask(__name__)
 # SQL Server Connection
 conn = pyodbc.connect(
     'DRIVER={ODBC Driver 17 for SQL Server};'
-    'SERVER=sqlservergpmtwa43hxkby.database.windows.net;'
-    'DATABASE=sampledb;'
+    'SERVER=wit-register-server.database.windows.net;'
+    'DATABASE=WIT-Register-DB;'
     'UID=useradmin;'
     'PWD=Passw0rd!!!!'
 )
