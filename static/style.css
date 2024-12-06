@@ -16,6 +16,15 @@ p {
     text-align: center;
 }
 
+/* Specific style for the slogan */
+.slogan {
+    text-align: center;
+    font-size: 24px;
+    font-style: italic;
+    color: #555;
+    margin: 20px 0;
+}
+
 /* Flash messages styling */
 .message {
     text-align: center;
